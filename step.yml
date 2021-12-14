@@ -53,15 +53,15 @@ inputs:
   opts:
     title: SSH private key in RSA format
     is_expand: true
-    is_dont_change_value: true
+    is_dont_change_value: false
     is_sensitive: true
 - ssh_key_save_path: $HOME/.ssh/bitrise_step_activate_ssh_key
   opts:
     title: |-
       (Optional) path to save the private key.
     is_expand: true
-    is_dont_change_value: true
-- is_remove_other_identities: "true"
+    is_dont_change_value: false
+- is_remove_other_identities: "false"
   opts:
     title: Remove other identities?
     description: |-
@@ -75,7 +75,7 @@ inputs:
     value_options:
     - "true"
     - "false"
-    is_dont_change_value: true
+    is_dont_change_value: false
 - verbose: "false"
   opts:
     title: Enable verbose logging
